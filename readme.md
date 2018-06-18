@@ -165,20 +165,24 @@ page.
 ### Issues
 
 * cloner le projet
-```git clone 
+```
+git clone 
 ````
 * Créer une branche (ne jamais travailler sur master)
-``` git checkout -b name-lastName
+``` 
+git checkout -b name-lastName
 ```
 * Résoudre les issues sur la branche 
 * 1 commit = 1 issue 
-``` git add . 
-		git commit -m “fixes issue #12”
-		git add . 
-		git commit -m “fixes issue #36”
+``` 
+git add . 
+git commit -m “fixes issue #12”
+git add . 
+git commit -m “fixes issue #36”
 ```
 * apres avoir fix les issues et commit 
-``` git push origin name-lastName
+``` 
+git push origin name-lastName
 ```
 * créer une pull request --> recap des fichiers et des modifications
 * quand otut terminé, request a review
@@ -207,12 +211,14 @@ Il faut choisir une police non-système que l’on souhaite utiliser.
 * Je souhaite que mon paragraphe <p>Ceci est mon seul et unique paragraphe.</p> dans mon HTML soit en “Montserrat ExtraLight”
 * Ensuite, on déclare dans le CSS la police voulue en incluant dans la fonction la source de la police en format .woff (Web Open File Format), .woff2, .ttf…
 
-```@font-face { font-family: “Montserrat_ExtraLight”;
+```
+@font-face { font-family: “Montserrat_ExtraLight”;
 src: url(‘../fonts/montserrat-v12-latin-extralight.woff’); }
 ```
 
 * Enfin, on choisit où la police sera utilisée :
-```p {font-family : Montserrat_ExtraLight;}
+```
+p {font-family : Montserrat_ExtraLight;}
 ```
 Une limite 
 
