@@ -160,8 +160,66 @@ page.
 
 * VW : très utile pour les interfaces fluides.
 
+## Work with github 
+
+### Issues
+
+* cloner le projet
+```git clone 
+````
+* Créer une branche (ne jamais travailler sur master)
+``` git checkout -b name-lastName
+```
+* Résoudre les issues sur la branche 
+* 1 commit = 1 issue 
+``` git add . 
+		git commit -m “fixes issue #12”
+		git add . 
+		git commit -m “fixes issue #36”
+```
+* apres avoir fix les issues et commit 
+``` git push origin name-lastName
+```
+* créer une pull request --> recap des fichiers et des modifications
+* quand otut terminé, request a review
+
+## CSS Tips 
+
+### Proporiétés z-index
+
+* définit le « z-order » (NdT : « ordre z » n'est pas usité) d'un élément positionné et de ses éléments fils. 
+* Lorsque des éléments se chevauchent, le z-order détermine l'ordre des différentes couches que formeront les éléments
+* Généralement, un élément couvrira un autre élément si sa valeur de  z-index est supérieure à celle du deuxième élément.
+
+### Font-face 
+
+c'est quoi ?
+
+* La règle font-face permet aux utilisateurs d’intégrer des polices non-système* aux sites. 
+C’est une fonction du CSS3 qui rend transparente toutes les polices.
+*police non-système : police qui n’est pas installée sur les systèmes d’ordinateurs PC & Mac.
+
+Comment ca fonctionne ?
+
+* Tout d’abord, la fonction @font-face s’utilise dans la partie style de l’integration, dans le CSS. 
+Il faut choisir une police non-système que l’on souhaite utiliser. 
+
+* Je souhaite que mon paragraphe <p>Ceci est mon seul et unique paragraphe.</p> dans mon HTML soit en “Montserrat ExtraLight”
+* Ensuite, on déclare dans le CSS la police voulue en incluant dans la fonction la source de la police en format .woff (Web Open File Format), .woff2, .ttf…
+
+```@font-face { font-family: “Montserrat_ExtraLight”;
+src: url(‘../fonts/montserrat-v12-latin-extralight.woff’); }
+```
+
+* Enfin, on choisit où la police sera utilisée :
+```p {font-family : Montserrat_ExtraLight;}
+```
+Une limite 
+
+* Le fichier de la police est chargé avec le chargement de la page ce qui peut rendre le chargement plus lent qu’une page normale.
+
 
 ## Liens utiles :
 
 * [Caniuse]: https://caniuse.com/#feat=viewport-units
-# hetic_protips
+
